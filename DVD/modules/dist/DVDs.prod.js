@@ -1,0 +1,1 @@
+"use strict";var fs=require("fs"),read_json_file=function(){return fs.readFileSync("./data/DVDs.json")};exports.list=function(){return JSON.parse(read_json_file())},exports.calculate_price=function(e){for(var r=JSON.parse(read_json_file()),n=0;n<r.length;n++){var s=(r[n].price*(e+1)).toFixed(2);r[n].price=s}return r};
